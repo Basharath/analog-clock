@@ -66,8 +66,8 @@ export default class Clock extends Component {
                     className={`number${i}`}
                     style={{
                       transform: `translate(${
-                        Math.cos((pi * i) / 6 - pi / 2) * 180
-                      }px,${Math.sin((pi * i) / 6 - pi / 2) * 180}px)`,
+                        Math.cos((pi * i) / 6 - pi / 2) * 150
+                      }px,${Math.sin((pi * i) / 6 - pi / 2) * 150}px)`,
                     }}
                   >
                     {i}
