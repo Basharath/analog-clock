@@ -31,12 +31,13 @@ export default class Clock extends Component {
 
   getTheTime() {
     const currentDate = new Date();
-    const hours = currentDate.getHours() % 12;
-    const minutes = currentDate.getMinutes();
-    const seconds = currentDate.getSeconds();
-    const hoursDeg = hours * 30 + minutes * 0.5;
-    const minutesDeg = minutes * 6;
-    const secondsDeg = seconds * 6;
+    const secondsRatio = currentDate.getSeconds() / 60;
+    const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60;
+    const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
+
+    const hoursDeg = hoursRatio * 360;
+    const minutesDeg = minutesRatio * 360;
+    const secondsDeg = secondsRatio * 360;
     this.setState({ hoursDeg, minutesDeg, secondsDeg });
   }
 

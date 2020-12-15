@@ -63,7 +63,19 @@ body,
   width: 5px;
   height: 30%;
   background-color: #000;
+  /* position: relative; */
 }
+
+/* .hours.hand::after {
+  content: '';
+  position: absolute;
+  border-width: 4.5px;
+  border-style: solid;
+  background-color: transparent;
+  border-color: transparent transparent #000 transparent;
+  left: -40%;
+  bottom: 100%;
+} */
 
 .minutes.hand {
   width: 3px;
